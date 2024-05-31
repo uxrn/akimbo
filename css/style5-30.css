@@ -20,7 +20,7 @@ b {
   font-weight: bold;
 }
 .link:hover {
-  color: #000;
+  color: #fff;
   background-color: #e0351b;
 }
 .b2 {
@@ -44,7 +44,7 @@ b {
   margin: -10px 0 0 0;
 }
 .hm-icon:hover {
-  fill: #000;
+  fill: #fff;
   background-color: inherit;
 }
 #footer {
@@ -64,7 +64,7 @@ b {
 }
 .logo-white {
   width: 200px;
-  background-color: #e0351b;
+  background-color: #e6e6e6;
 }
 .hr-line {
   width: 300px; 

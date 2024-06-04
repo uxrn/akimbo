@@ -69,11 +69,14 @@ footer {
   font-weight: 600;
 }
 
-@media (max-width: 389px) {
-  header {
-    padding: 150px 0 0 0;
+@media (max-width: 576px) {
+  body {
+    padding: 50px 0;
   }
-  footer {
-    padding: 0 0 50px 0;
+}
+
+@media (max-width: 376px) {
+  body {
+    padding: 100px 0;
   }
 }

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+  overflow-y: scroll;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+i {
+  font-size: 11px;
+}
+b {
+  color: #e0351b;
+  font-weight: 800;
+}
+.link {
+  text-decoration: none;
+  color: #e0351b;
+  font-weight: bold;
+}
+.link:hover {
+  color: #fff;
+  background-color: #e0351b;
+}
+.b2 {
+  color: #000;
+  font-weight: 600;
+}
+.del-txt-spc {
+  margin: 0 0 6px 0;
+}
+.icon {
+  font-size: 22px;
+  padding: 3px 6px 3px 6px;
+}
+.icon:hover {
+  background-color: inherit;
+}
+.hm-icon {
+  fill:#e0351b;
+  height: 32px;
+  padding: 6px;
+  margin: -10px 0 0 0;
+}
+.hm-icon:hover {
+  fill: #fff;
+  background-color: inherit;
+}
+#footer {
+  font-size: 11px;
+  color: #000;
+  font-weight: 500;
+}
+.shop-link {
+  font-weight: 800;
+  font-size: 22px;
+}
+.arrow {
+  font-size: 18px;
+}
+.logo {
+  width: 200px;
+}
+.logo-white {
+  width: 200px;
+  background-color: #e6e6e6;
+}
+.hr-line {
+  width: 300px; 
+  height: 12px; 
+  border-bottom: 1px solid gray;
+}
+.hr-box {
+  font-size: 16px; 
+  background-color: #fff; 
+  padding: 0 10px; 
+  color: #e0351b
+}
+.png:hover {
+  filter: brightness(0) invert(1);
+}
+.png-bg:hover {
+  background-color: #e0351b;
+}

@@ -2,7 +2,7 @@
 
 :root {
   --ak-red: #e0351b;
-  --ak-red-dark: #c02d16;
+  --ak-red-dark: #d03119;
   --ak-red-darker: #a82612;
   --ak-gold: #ebc23c;
   --ak-gold-hover: #facf4f;
@@ -21,17 +21,17 @@ i {
   font-size: 11px;
 }
 b {
-  color: #e0351b;
+  color: var(--ak-red);
   font-weight: 800;
 }
 .link {
   text-decoration: none;
-  color: #e0351b;
+  color: var(--ak-red);
   font-weight: bold;
 }
 .link:hover {
   color: #fff;
-  background-color: #e0351b;
+  background-color: var(--ak-red);
 }
 .b2 {
   color: #000;
@@ -48,7 +48,7 @@ b {
   background-color: inherit;
 }
 .hm-icon {
-  fill:#e0351b;
+  fill:var(--ak-red);
   height: 32px;
   padding: 6px;
   margin: -10px 0 0 0;
@@ -85,18 +85,18 @@ b {
   font-size: 16px; 
   background-color: #fff; 
   padding: 0 10px; 
-  color: #e0351b
+  color: var(--ak-red)
 }
 .png:hover {
   filter: brightness(0) invert(1);
 }
 .png-bg:hover {
-  background-color: #e0351b;
+  background-color: var(--ak-red);
 }
 .name-title {
   font-weight: 800; 
   font-size: 24px; 
-  color: #e0351b;;
+  color: var(--ak-red);;
 }
 .name-r {
   vertical-align: 12px;
@@ -119,7 +119,7 @@ b {
 
 /* Top social bar */
 .top-social-bar {
-  background: var(--ak-red-darker);
+  background: var(--ak-red-dark);
   height: 40px;
   display: flex;
   align-items: center;
@@ -276,7 +276,7 @@ body {
 
 /* Footer component - red background, icons match top bar */
 .akimbo-footer {
-  background: var(--ak-red) !important;
+  background: var(--ak-red-dark) !important;
   color: #fff;
   padding: 1.75rem 1rem 1rem;
   text-align: center;

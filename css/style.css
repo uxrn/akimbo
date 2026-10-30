@@ -327,10 +327,10 @@ body {
   filter: brightness(0) invert(1);
 }
 .division-idle .logo-cs {
-  max-width: 110px;
+  max-width: 120px;
 }
 .division-idle .logo-cc {
-  max-height: 60px;
+  max-height: 50px;
 }
 .division-card.open {
   border-bottom-left-radius: 0;

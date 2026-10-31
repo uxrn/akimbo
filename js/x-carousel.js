@@ -1,4 +1,4 @@
-// X embeds carousel: 3 visible (1 on mobile), auto-advance every 3s, fixed height
+// X embeds carousel: 3 visible on desktop, 1 on mobile, manual arrows only
 (function() {
   document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.getElementById('xCarousel');
@@ -6,12 +6,18 @@
     const track = carousel.querySelector('.x-carousel-track');
     const slides = Array.from(track.children);
     const total = slides.length;
+    const wrap = carousel.closest('.x-carousel-wrap');
+    const prevBtn = wrap?.querySelector('.x-prev');
+    const nextBtn = wrap?.querySelector('.x-next');
     let index = 0;
-    let visible = window.innerWidth < 768 ? 1 : 3;
-    let timer;
+    let visible = getVisible();
+
+    function getVisible() {
+      return window.innerWidth < 768 ? 1 : 3;
+    }
 
     function updateVisible() {
-      visible = window.innerWidth < 768 ? 1 : 3;
+      visible = getVisible();
       const w = carousel.clientWidth;
       slides.forEach(s => {
         s.style.flex = 'none';
@@ -19,7 +25,6 @@
       });
       if (index > total - visible) index = Math.max(0, total - visible);
       move();
-      lockHeight();
     }
 
     function move() {
@@ -36,41 +41,10 @@
       move();
     }
 
-    function lockHeight() {
-      const heights = slides.map(s => {
-        const iframe = s.querySelector('iframe');
-        return Math.max(s.scrollHeight, iframe ? iframe.offsetHeight : 0, s.offsetHeight);
-      });
-      const h = Math.max(...heights);
-      if (h > 100) {
-        carousel.style.height = (h + 30) + 'px';
-        carousel.style.minHeight = (h + 30) + 'px';
-      }
-    }
-
-    document.querySelector('.x-next')?.addEventListener('click', () => { next(); resetTimer(); });
-    document.querySelector('.x-prev')?.addEventListener('click', () => { prev(); resetTimer(); });
-
-    function startTimer() { timer = setInterval(next, 5000); }
-    function resetTimer() { clearInterval(timer); startTimer(); }
+    nextBtn?.addEventListener('click', next);
+    prevBtn?.addEventListener('click', prev);
 
     window.addEventListener('resize', updateVisible);
     updateVisible();
-    startTimer();
-
-    // Keep checking height as Twitter embeds load
-    let checks = 0;
-    const check = setInterval(() => {
-      lockHeight();
-      checks++;
-      if (checks > 30) clearInterval(check);
-    }, 500);
-
-    // Also listen for Twitter widget render if available
-    if (window.twttr && window.twttr.ready) {
-      window.twttr.ready(function(twttr) {
-        twttr.events.bind('rendered', lockHeight);
-      });
-    }
   });
 })();

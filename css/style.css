@@ -300,8 +300,8 @@ body {
 .division-card {
   background: var(--ak-red);
   border-radius: 12px;
-  height: 140px;
-  width: 300px;
+  height: 120px;
+  width: 240px;
   max-width: 100%;
   position: relative;
   cursor: pointer;
@@ -330,7 +330,7 @@ body {
   max-width: 120px;
 }
 .division-idle .logo-cc {
-  max-height: 50px;
+  max-height: 60px;
 }
 .division-card.open {
   border-bottom-left-radius: 0;

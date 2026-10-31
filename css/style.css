@@ -218,6 +218,11 @@ b {
 }
 .btn-shop i { font-size: 0.85rem; }
 
+.btn:active {
+  background-color: var(--ak-gold);
+  border-color: var(--ak-gold);
+}
+
 /* Navbar toggler for mobile - force white icon */
 .navbar-akimbo .navbar-toggler {
   border-color: rgba(255,255,255,0.6);
@@ -465,4 +470,8 @@ body {
   .x-slide { flex: 0 0 100%; padding: 0 0.25rem; }
   .x-carousel-btn { width: 30px; height: 60px; }
   .x-carousel-btn i { font-size: 1.3rem !important; }
+}
+
+@media (max-width: 575.98px) { 
+  .top-social-bar { display: none; }
 }
